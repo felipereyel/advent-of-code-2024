@@ -39,14 +39,12 @@ def main():
             else:
                 pages.append(line.split(","))
 
-        print(rules)
         sorteds = []
         for page in pages:
             sorted_page = sort(page.copy(), rules)
             if sorted_page == page:
                 sorteds.append(page)
 
-        print(sorteds)
         print(sum([int(s[len(s) // 2]) for s in sorteds]))
 
 
